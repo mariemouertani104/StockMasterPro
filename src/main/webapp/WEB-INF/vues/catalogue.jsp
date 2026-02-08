@@ -31,25 +31,23 @@
             text-align: center;
         }
     </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 
 <body>
+
 <div class="container">
-    <h2>Catalogue des produits</h2>
+
+    <!-- Barre supérieure -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0">Catalogue des produits</h2>
+
+        <!-- Bouton logout -->
+        <a href="${pageContext.request.contextPath}/logout"
+           class="btn btn-outline-danger">
+            Logout
+        </a>
+    </div>
+
     <p><strong>Utilisateur connecté :</strong> ${sessionScope.user}</p>
     <p><strong>Dernière visite :</strong> ${lastVisit}</p>
 
@@ -71,6 +69,7 @@
         </c:forEach>
         </tbody>
     </table>
+
 </div>
 
 <!-- Bootstrap JS -->
